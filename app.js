@@ -48,13 +48,13 @@ function addPointsToAway(points) {
 }
 
 
-// function checkWinner() {
-//   if (home >= 10 || away >= 10) {
-//     window.alert("Home Team Wins");
-//     alert("Home Team Wins")
-//   }
+function checkWinner() {
+  if (home >= 10 || away >= 10) {
+    window.alert("Home Team Wins");
+    alert("Home Team Wins")
+  }
 
-// }
+}
 
 
 
