@@ -10,7 +10,7 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
     defer></script>
   <link rel="stylesheet" href="style.css">
-  <title>Secret Code</title>
+  <title>Scoreboard</title>
 </head>
 
 <body>
@@ -19,45 +19,52 @@
       <div class="col-md-12">
         <div class="text-end p-4">
           <!-- TODO Set button function -->
-          <button class="btn btn-danger">RESET</button>
+          <button onclick="resetBoard()" class="btn btn-danger">RESET</button>
         </div>
       </div>
     </div>
   </div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="d-flex justify-content-center bg-white">
-          HOME
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="d-flex justify-content-center bg-white">
-          AWAY
-        </div>
-      </div>
+  <!-- NOTE Scores -->
+  <section>
+    <div class="container-fluid">
       <div class="row">
         <div class="col-md-6">
-          <div class="d-flex justify-content-center">
-            <div class="text-white">
-              <button class="btn btn-danger">Home +1</button>
-              <button class="btn btn-danger">Home +3</button>
-              <button class="btn btn-danger">Home -1</button>
-            </div>
+          <div class="bg-white text-center">
+            <h2>HOME
+            </h2>
+            <div id="home-score">0</div>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="d-flex justify-content-center">
-            <div class="text-white">
-              <button onclick="buttonClick()" class="btn btn-danger">Away +1</button>
-              <button class="btn btn-danger">Away +3</button>
-              <button class="btn btn-danger">Away -1</button>
+          <div class="text-center bg-white">
+            <h2>Away
+            </h2>
+            <div id="away-score">0</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="d-flex justify-content-center">
+              <div class="text-white">
+                <button onclick="addPointsToHome(1)" class="btn btn-danger">Home +1</button>
+                <button onclick="addPointsToHome(3)" class="btn btn-danger">Home +3</button>
+                <button onclick="addPointsToHome(-1)" class="btn btn-danger">Home -1</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex justify-content-center">
+              <div class="text-white">
+                <button onclick="addPointsToAway(1)" class="btn btn-danger">Away +1</button>
+                <button onclick="addPointsToAway(3)" class="btn btn-danger">Away +3</button>
+                <button onclick="addPointsToAway(-1)" class="btn btn-danger">Away -1</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <script src="app.js"></script>
 </body>
